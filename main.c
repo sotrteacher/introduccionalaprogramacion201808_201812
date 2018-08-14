@@ -3,9 +3,9 @@
  * la maldici\'on del programador--. En este curso, 
  * Usted aprender\'a a usar correctamente muchos de 
  * los elementos del lenguaje C. Especialmente, usted 
- * deber\'a a´render a usar apuntadores, de lo contrario
+ * deber\'a aprender a usar apuntadores, de lo contrario
  * sufrir\'a lo indecible y un perro salvaje lo 
- * perseguir\'a por los pasillo de la UPIITA (si no 
+ * perseguir\'a por los pasillos de la UPIITA (si no 
  * aprende a usar bien los apuntadores). 
  */
 #include <stdio.h> /* int printf(char*, ...) 
