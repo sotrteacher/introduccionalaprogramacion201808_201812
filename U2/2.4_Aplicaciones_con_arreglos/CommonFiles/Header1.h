@@ -1,6 +1,4 @@
 #pragma once
-//Elemento del arreglo SM##k##w de la posici\'on fila row y columna col
-//#define subm(k,w,row,col) SM##k##w[row][col]
 
 /** Imprime una matriz de 3 por 3
  */
@@ -90,9 +88,39 @@ SUBM(2, 0);
 SUBM(2, 1);
 SUBM(2, 2);
 
-/*Matriz de cofACTORES*/
+/** Matriz de cofACTORES
+ Declara un arreglo de fil filas por col columnas
+ */
 #define Mcof(M,fil,col) float M[fil][col]
 
+ /**
+   Multiplica la matriz M por el escalar s;
+   n debe ser el n\'umero de filas de la matriz M y,
+   m debe ser el n\'umero de columnas de la matriz M.
+ */
+#define MultByScalar(s,M,n,m) \
+for(_i=0;_i<n;_i++)\
+  for(_j=0;_j<m;_j++)\
+    M[_i][_j]=s*(M[_i][_j]);
+
+ /**
+  * Multiplicaci\'on de matrices
+  * Matrix C is initially filled with zeros
+  */
+#define Mult(A,B,C,n,m,t)       \
+for (_i = 0; _i<n; _i++)\
+	for (_j = 0; _j<t; _j++)\
+		C[_i][_j] = 0; \
+for (_i = 0; _i<n; _i++)\
+	for (_j = 0; _j<t; _j++)\
+		for (_k = 0; _k<m; _k++)\
+			C[_i][_j] += A[_i][_k] * (B[_k][_j]);
+
+  /**
+   * Obtiene la transpuesta de una matriz de n por m;
+   * el resultado se guarda en la matriz At que debe
+   * ser de m por n.
+   */
 #define transpuesta(n,m,A,At)  \
 for(_i=0;_i<m;_i++){\
   for(_j=0;_j<n;_j++){\
@@ -100,21 +128,15 @@ for(_i=0;_i<m;_i++){\
   }\
 }
 
-#define MultByScalar(s,M,n,m) \
-for(_i=0;_i<n;_i++)\
-  for(_j=0;_j<m;_j++)\
-    M[_i][_j]=s*(M[_i][_j]);
-
 /**
- * Multiplicaci\'on de matrices
- * Matrix C is initially filled with zeros
+ * Imprime la matriz A de N x M
  */
-#define Mult(A,B,C,n,m,t)       \
-for (_i = 0; _i<n; _i++)\
-	for (_j = 0; _j<t; _j++)\
-		C[_i][_j] = 0; \
-		for (_i = 0; _i<n; _i++)\
-			for (_j = 0; _j<t; _j++)\
-				for (_k = 0; _k<m; _k++)\
-					C[_i][_j] += A[_i][_k] * (B[_k][_j]);
+#define show_mNxM(A,N,M)	\
+for(_i=0;_i<N;_i++){\
+  for(_j=0;_j<M;_j++){\
+    printf("%7.2f ",A[_i][_j]);\
+  }\
+  printf("\n");\
+}
+
 
