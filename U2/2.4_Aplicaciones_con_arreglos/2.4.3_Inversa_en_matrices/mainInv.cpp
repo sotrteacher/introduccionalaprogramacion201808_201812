@@ -3,8 +3,6 @@
 #include <stdlib.h>
 #include <math.h>  /*double pow(double base,double exp)*/
 #include "..\CommonFiles\Header1.h"
-#define LMC1
-
 
 int main(int argc, char *argv[])
 {
