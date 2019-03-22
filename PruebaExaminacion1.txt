@@ -1,0 +1,120 @@
+Prueba de examinaci\'on de Introducci\'on a la Programaci\'on
+
+Nombre:________________________________________ GRUPO: 1MV2
+
+Lenguaje de programaci\'on: C
+
+Pregunta 1
+Dado este c\'odigo:
+#define FORMULA_A(arr) (sizeof(arr[0])/sizeof(arr[0][0]))
+
+y este c\'odigo:
+int main(){
+//...
+  float A[2][3] = { { 2,4,6 },{ 8,10,12 } };                //line n1
+  printf("El arreglo A tiene %d columnas.\n",FORMULA_A(A)); //line n2
+//...
+}//end main()
+
+¿Cu\'al de las siguientes frases es verdadera? (elija solo una)
+a. La l\'inea n2 imprime "El arreglo A tiene 3 filas".
+b. La l\'inea n2 produce error de compilaci\'on.
+c. La l\'inea n2 imprime: El arreglo A tiene 3 columnas.
+d. La l\'inea n2 imprime: "El arreglo A tiene 3 columnas".
+Respuesta:_________
+
+Pregunta 2
+Dado este c\'odigo:
+#define FORMULA_B(arr,type) sizeof(arr)/(sizeof(type)*(sizeof(arr[0])/sizeof(arr[0][0])))
+
+y este c\'odigo:
+int main(){
+//...
+  float A[2][3] = { { 2,4,6 },{ 8,10,12 } };                //line n1
+  printf("El arreglo A tiene %d filas.\n",FORMULA_B(A));    //line n2
+//...
+}//end main()
+
+¿Cu\'al de las siguientes frases es verdadera? (elija solo una)
+a. La l\'inea n2 imprime: El arreglo A tiene 2 filas.
+b. La l\'inea n2 imprime: El arreglo A tiene 3 columnas.
+c. La l\'inea n2 produce error de compilaci\'on.
+d. La l\'inea n2 imprime: "El arreglo A tiene 2 filas".
+Respuesta:_________
+
+Pregunta 3
+Dado lo siguiente:
+void swap0(int x,int y){
+  int tmp=y;
+  y=x;
+  x=tmp;
+  printf("%d\n",x);        //line n1
+  printf("%d\n",y);        //line n2
+}
+
+void swap1(int *x,int *y){
+  int tmp=*y;
+  *y=*x;
+  *x=tmp;
+  printf("%d\n",*x);        //line n3
+  printf("%d\n",*y);        //line n4
+}
+
+int main(){
+//...
+  int A=100,B=200;
+  swap0(A,B);
+  printf("%d\n",A);        //line n5
+  printf("%d\n",B);        //line n6
+  swap1(A,B);
+  printf("%d\n",A);        //line n7
+  printf("%d\n",B);        //line n8
+//...
+}//end main()
+
+Pregunta 3.1
+¿Qu\'e inprime la l\'inea n1? R=________
+Pregunta 3.2
+¿Qu\'e inprime la l\'inea n2? R=________
+Pregunta 3.3
+¿Qu\'e inprime la l\'inea n3? R=________
+Pregunta 3.3
+¿Qu\'e inprime la l\'inea n3? R=________
+Pregunta 3.4
+¿Qu\'e inprime la l\'inea n4? R=________
+Pregunta 3.5
+¿Qu\'e inprime la l\'inea n5? R=________
+Pregunta 3.6
+¿Qu\'e inprime la l\'inea n6? R=________
+Pregunta 3.7
+¿Qu\'e inprime la l\'inea n7? R=________
+Pregunta 3.8
+¿Qu\'e inprime la l\'inea n8? R=________
+
+Pregunta 4
+¿Cu\'al es el valor de las variables despu\'es de que se ejecuta 
+cada sentencia?
+char wellcome[]="hello";  // wellcome[0]=_______
+float x=5.5;              // x=_______
+float y=10.2;             // y=_______
+float z;
+float *px=&x;             // *px=_______
+*px=3.14;                 // *px=_______
+y=*px;                    // y=_______
+
+Pregunta 5
+Escriba un programa en lenguaje C que le pida al usuario un 
+n\'umero decimal de 10 d\'igitos. El usuario del programa debe 
+introducir el n\'umero a trav\'es del teclado de la PC (El 
+d\'igito m\'as significativo debe ser diferente de cero, su 
+programa debe asegurarse de que el usuario introdujo un n\'umero 
+que cumple con esta restricci\'on). Una vez leido el n\'umero, 
+su programa debe determinar si el n\'umero introducido es un 
+n\'umero par o impar e imprimir un mensaje en consecuencia 
+que diga:
+El numero <valor del numero> es par.
+o bien:
+El numero <valor del numero> es impar.
+
+
+
